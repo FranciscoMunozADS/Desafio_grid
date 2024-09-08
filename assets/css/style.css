@@ -1,0 +1,100 @@
+/* Nav | Titulo */
+
+nav{
+    background-color: rgb(54, 55, 50);
+    grid-area: nav;
+    text-align: center;
+    color: white;
+}
+
+
+/* Flexbox para barra lateral */
+/* Punto 3 */
+
+aside{
+    background-color: rgb(83, 216, 251);
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-right: 2px solid rgb(54, 55, 50);
+}
+
+aside p:hover{
+    cursor:pointer;
+}
+
+
+/* Grid para productos */
+/* Punto 2 */
+
+main{
+    background-color: rgb(102, 195, 255);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Flex productos (cards) */
+/* Punto 4 */
+
+.productos{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 1px;
+    background-color: white;
+    padding-bottom: 10px;
+    border: 1px solid rgb(54, 55, 50);
+}
+
+
+main article img{
+    width: 250px;
+}
+
+/* Boton comprar */
+
+main article button{
+    background-color: rgb(54, 55, 50);
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+main article button:hover{
+    cursor: pointer;
+    background-color: rgba(54, 55, 50, 0.7);
+}
+
+
+/* Grid principal */
+/* Punto 1 */
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-areas: 
+    'nav nav'
+    'aside main'
+    'footer footer';
+}
+
+
+/* Footer */
+
+footer{
+    background-color: rgb(220, 225, 233);
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid rgb(54, 55, 50);
+}
